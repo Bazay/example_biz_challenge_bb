@@ -1,6 +1,6 @@
 require 'csv'
 
-module Interpreter
+module Parser
   module Format
     #Contains Format::Csv, Format::Text
 
@@ -36,7 +36,7 @@ module Interpreter
 
         f = File.open(filename, "r")
         headers = f.each_line.first.split(SEPARATOR).map{|h|h.parameterize.underscore.to_sym}
-        
+
         f.each_line do |line|
           values = line.split(SEPARATOR)
 
