@@ -16,8 +16,8 @@ gem 'thin'
 gem 'simple_form'
 gem 'bootstrap-sass'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+#Exchange rate API
+gem 'open_exchange_rates'
 
 group :development do
   gem 'better_errors'
@@ -35,6 +35,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
+  gem 'pry'
 end
 group :production do
   gem 'rails_12factor' #required for Heroku push for apps w/ Rails 4+
