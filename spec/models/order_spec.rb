@@ -8,12 +8,11 @@ RSpec.describe Order, type: :model do
 
     it "order_date format" do
       @order.order_date = "not a valid datetime"
-      expect(order.valid?).to eql(false)
-      expect(order.errors.added?(:order_date)).to eql(true)
+      expect(@order.valid?).to eql(false)
+      expect(@order.errors.include?(:order_date)).to eql(true)
     end
 
-    it "order_date presence" do
-    end
+    it "order_date presence"
     it "customer_id is an integer"
     it "customer_id presence"
     it "supplier_id is an integer"

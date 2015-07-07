@@ -9,7 +9,7 @@ class Order < ActiveRecord::Base
     CURRENCY_USD
   ]
 
-  DATE_REGEX = '/(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d/'
+  DATE_REGEX = /(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d/
 
   #Validations
   validates :order_date, :format => { with: Order::DATE_REGEX, message: "must be readable format" }
