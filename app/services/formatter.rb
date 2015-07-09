@@ -1,5 +1,3 @@
-require 'Order'
-
 module Formatter
   module Currency
 
