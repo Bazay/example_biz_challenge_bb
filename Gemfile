@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.2.2'
 
+gem 'sprockets-rails', '>= 2.1.4  '
 gem 'rails', '4.2.1'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -14,7 +15,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'thin'
 gem 'simple_form'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.3.5'
 
 #Exchange rate API
 gem 'open_exchange_rates'
