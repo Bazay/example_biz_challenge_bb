@@ -14,7 +14,7 @@ class Order < ActiveRecord::Base
   DATE_REGEX = /(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d/
 
   #Validations
-  #validates :order_date, :format => { with: Order::DATE_REGEX, message: "must be readable format" }
+  validates :order_date, :presence => true#, :format => { with: Order::DATE_REGEX, message: "must be readable format" }
   validates :customer_id, :numericality => {integer_only: true}, :presence => true, :allow_blank => false
   validates :supplier_id, :numericality => {integer_only: true}, :presence => true, :allow_blank => false
   validates :delivery_address, :presence => true # "" is a valid value, nil is not..
