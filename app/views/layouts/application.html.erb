@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ExampleBizChallenge</title>
+  <title>Example Biz Challenge</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <navigation>
+    <%= render 'layouts/navigation' %>
+  </navigation>
+
+  <div class="container">
+    <%= yield %>
+
+    <%= render 'layouts/footer' %>
+  </div>
 
 </body>
 </html>

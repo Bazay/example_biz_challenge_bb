@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.2.2'
 
+gem 'sprockets-rails', '>= 2.1.4  '
 gem 'rails', '4.2.1'
 gem 'pg'
 gem 'sass-rails', '~> 5.0'
@@ -14,10 +15,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'thin'
 gem 'simple_form'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 3.3.5'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+#Exchange rate API
+gem 'open_exchange_rates'
 
 group :development do
   gem 'better_errors'
@@ -35,6 +36,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
+  gem 'pry'
 end
 group :production do
   gem 'rails_12factor' #required for Heroku push for apps w/ Rails 4+

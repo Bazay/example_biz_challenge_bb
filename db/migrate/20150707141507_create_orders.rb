@@ -5,7 +5,7 @@ class CreateOrders < ActiveRecord::Migration
       t.integer :customer_id
       t.integer :supplier_id
       t.text :delivery_address
-      t.float :total_order_value
+      t.float :total_order_value, :default => 0.0
       t.string :currency
 
       t.timestamps null: false

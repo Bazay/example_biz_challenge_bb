@@ -12,7 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-sprockets
-//= require bootstrap
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .
+
+//Page Scroll without a JQuery plugin
+$(document).ready(function() {
+  $(".scroll-button").click(function() {
+    $('html, body').animate({
+        scrollTop: $($(this).attr('href')).offset().top-50
+    }, 1000);
+  });
+});
